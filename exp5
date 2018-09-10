@@ -1,0 +1,54 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+class Rational
+{
+public:
+
+    Rational()
+    {
+
+    }
+
+    tational(double x,double y)
+    {
+        double l = x;
+        double m = y;
+
+        cout<<"\nAddition of       "<<l<<" and "<<m<<" is:"<<l+m;
+        cout<<"\nSubtraction of    "<<l<<" and "<<m<<" is:"<<l-m;
+        cout<<"\nMultiplication of "<<l<<" and "<<m<<" is:"<<l*m;
+
+    }
+    void reduce()
+    {
+        int p;
+        int q;
+        cout<<"\nEnter Numerator\n";
+        cin>>p;
+        cout<<"\nEnter Denominator\n";
+        cin>>q;
+
+        float c = __gcd(p,q);
+        cout<<"\nThe reduced fraction is: \n";
+        cout<<p/c<<endl;
+        cout<<"---"<<endl;
+        cout<<q/c<<endl;
+
+    }
+
+};
+
+int main()
+{
+    double x,y;
+    cout<<"Enter First and Second Number followed by Enter key\n";
+    cin>>x;
+    cin>>y;
+    Rational z;
+    z.tational(x,y);
+    z.reduce();
+    return 0;
+}
